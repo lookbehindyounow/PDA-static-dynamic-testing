@@ -1,3 +1,6 @@
+# I don't know if it was supposed to be part of task 1 but the specs folder should've been named tests & the class TestCardGame
+# should've had unittest.TestCase passed as an argument for it to inherit the properties of TestCase.
+
 class CardGame:
 
 

@@ -16,3 +16,8 @@ class TestCardGame(unittest.TestCase):
         self.assertEqual(self.cards[0][0].suit,"S")
         self.assertEqual(self.cards[3][12].value,13)
         self.assertEqual(self.cards[3][12].suit,"D")
+    
+    @unittest.skip("")
+    def test_check_for_ace(self):
+        self.assertTrue(self.game.check_for_ace(self.cards[0][0]))
+        self.assertFalse(self.game.check_for_ace(self.cards[0][1]))

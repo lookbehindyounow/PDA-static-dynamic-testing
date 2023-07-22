@@ -17,9 +17,14 @@ class CardGame:
   def highest_card(self, card1, card2):
     if card1.value > card2.value:
       return card1
-    else:
+    if card1.value < card2.value:
       return card2
-  
+    if card1.value == card2.value:
+      suits_ordered=["S","H","D","C"]
+      if suits_ordered.index(card1.suit) < suits_ordered.index(card2.suit):
+        return card1
+      if suits_ordered.index(card1.suit) > suits_ordered.index(card2.suit):
+        return card2
 
 
 def cards_total(self, cards):

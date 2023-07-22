@@ -26,5 +26,8 @@ class TestCardGame(unittest.TestCase):
         self.assertEqual(self.game.highest_card(self.cards[0][1],self.cards[0][0]),self.cards[0][1])
     
     def test_highest_suit(self):
-        self.assertEqual(self.game.highest_card(self.cards[0][0],self.cards[1][0]),self.cards[0][1])
+        self.assertEqual(self.game.highest_card(self.cards[0][0],self.cards[1][0]),self.cards[0][0])
         self.assertEqual(self.game.highest_card(self.cards[1][0],self.cards[0][0]),self.cards[0][0])
+    
+    def test_cards_total(self):
+        self.assertEqual(self.game.cards_total(self.cards[0]),"You have a total of 91")

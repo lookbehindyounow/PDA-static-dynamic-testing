@@ -20,3 +20,11 @@ class TestCardGame(unittest.TestCase):
     def test_check_for_ace(self):
         self.assertTrue(self.game.check_for_ace(self.cards[0][0]))
         self.assertFalse(self.game.check_for_ace(self.cards[0][1]))
+    
+    def test_highest_card(self):
+        self.assertEqual(self.game.highest_card(self.cards[0][0],self.cards[0][1]),self.cards[0][1])
+        self.assertEqual(self.game.highest_card(self.cards[0][1],self.cards[0][0]),self.cards[0][1])
+    
+    @unittest.skip("")
+    def test_highest_suit(self):
+        self.assertEqual(self.game.highest_card(self.cards[0][0],self.cards[1][0]),self.cards[0][1])
